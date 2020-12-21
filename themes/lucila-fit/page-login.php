@@ -8,9 +8,10 @@ get_header();
 
 ?>
 <div id="login" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bglogin.png')">
-    <div class="overlay login">
+    <div class="overlay"> </div>
+    <div class="login">
         <div class="contentlogin">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LucilaFit-logo.png" alt="lucila">
+            <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LucilaFit-logo.png" alt="lucila"></a>
             <h3>ELIGE TU PLAN Y ENTRENATE CON LAS MEJORES RUTINAS</h3>
             <p>Para ingresar debes estar suscripto</p>
         </div>

@@ -153,7 +153,7 @@ body.primary-navigation-open .primary-navigation .menu-button-container{
     background: unset;
 }
 
-    /*HOME TABS*/
+/*HOME TABS*/
 #tabHome{
     border:unset;
     margin-bottom: 30px;
@@ -257,7 +257,7 @@ aside.widget-area h5{
 }
 /*Single rutinas*/
 .background-single-wrapper{
-position: relative;
+    position: relative;
 }
 .image-background-image{
     height:300px;
@@ -266,8 +266,8 @@ position: relative;
 }
 .inner-bg-content{
     width: 100%;
-   position: absolute;
-   bottom: 0;
+    position: absolute;
+    bottom: 0;
     align-items: flex-end;
     z-index: 1000;
 }
@@ -338,19 +338,25 @@ ul.rutina-data li{
     background: linear-gradient(0deg, rgba(121,107,254,1) 0%, rgba(81,182,240,1) 100%);
 }
 /*Login*/
+body.page-login header#masthead, body.page-login  aside.widget-area{
+    display:none !important;
+}
 #login{
     width: 100%;
-    height: 500px;
+    height: 700px;
     background-size: cover;
+    position: relative;
 }
-#login  .overlay.login{
+#login .login{
     padding: 40px 20px;
-    background:rgba(0,0,0,0.7);
     width: 100%;
     height:100%;
+    z-index: 10000;
+    position:absolute;
 }
 #login .contentlogin{
     text-align: center;
+
 }
 #login .contentlogin img{
     max-width: 200px;
@@ -362,12 +368,14 @@ ul.rutina-data li{
     text-align: center;
     margin-bottom: 40px;
     font-size: 18px;
+    color:#fff;
 }
 #login .contentlogin p{
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 40px;
+    color:#fff;
 }
 body.page #login form#login-form input.input-register{
     padding:5px 15px;
@@ -397,7 +405,7 @@ body.page #login form#login-form input.input-register{
     font-size: 13px;
     margin-top: 20px;
 }
-    /*utilities*/
+/*utilities*/
 .hidden{
     display: none !important;
 }

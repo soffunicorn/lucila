@@ -158,3 +158,13 @@ function lucila_video_end()
 }
 
 add_action('wp_ajax_lucila_video_end', 'lucila_video_end');
+
+/*-----------------------------------------------------------------------------------*/
+/*	Body Class
+/*-----------------------------------------------------------------------------------*/
+add_filter( 'body_class', function( $classes ) {
+    if(is_page('login')){
+        $classes = array_merge( $classes, array( 'page-login' ));
+    }
+    return  $classes;
+} );
