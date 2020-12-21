@@ -1,0 +1,444 @@
+/*
+Theme Name: Lucila Fit
+description: Tema para Lucila Fit
+Author: Sofia
+Author URI: http://broobe.com
+Template: twentytwentyone
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: lucila-fit
+*/
+/*Menu*/
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('assets/fonts/Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('assets/fonts/Montserrat-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('assets/fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('assets/fonts/Montserrat-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+a:focus, button:focus{
+    background-color:transparent !important;
+    color:inherit !important;
+    outline: unset !important;
+}
+a:hover, a:focus{text-decoration: unset !important; }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 450px !important;
+    background: rgba(0,0,0,0.855) !important;
+    margin: 0 auto !important;
+
+}
+#masthead{
+    padding: 10px 15px !important;
+    display: flex;
+}
+#masthead .site-branding, #masthead nav#site-navigation{
+    width: 50%;
+    height: 30px;
+    top: -10px;
+}
+
+.site-branding .site-logo{
+    margin: 0;
+}
+.site-branding .site-logo img{
+    max-width: 50%;
+}
+#main{
+    padding: 0 !important;
+}
+div#page{
+    background: #fff;
+}
+#masthead #site-navigation .menu-button-container{
+    display: block;
+    padding-top:5px !important;
+
+}
+/*body.primary-navigation-open #masthead #site-navigation .menu-button-container{*/
+.primary-navigation > .primary-menu-container{
+    visibility: hidden !important;
+}
+body.primary-navigation-open  .primary-navigation > .primary-menu-container{
+    visibility: visible !important;
+    height: 100vh;
+    z-index: 100000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid transparent;
+    padding:71px 20px 25px 30px;
+    margin:0;
+
+    right: -15px;
+}
+body.primary-navigation-open .primary-navigation > .primary-menu-container {
+    position: absolute;
+    visibility: visible !important;
+    opacity: 1;
+    transform: translateY(0);
+    top:50px;
+    background: #fff;
+    padding: 20px !important;
+}
+body.primary-navigation-open .primary-navigation > .primary-menu-container ul{
+    padding: 0;
+}
+body.primary-navigation-open .primary-navigation > .primary-menu-container ul li{
+    list-style: none;
+}
+body.primary-navigation-open .primary-navigation > .primary-menu-container ul li a{
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size:18px;
+}
+body.primary-navigation-open .primary-navigation .menu-button-container{
+    background: #fff !important;
+    color:#000;
+}
+#primary-mobile-menu .dropdown-icon.open svg path{
+    fill: #000;
+}
+.primary-menu-container .search-menu form{
+    position:relative;
+}
+.primary-menu-container .search-menu input{
+    width: 100%;
+    border:unset !important;
+    border-radius: 30px;
+    max-width: 100%;
+    box-shadow: 1px 9px 4px -4px rgba(0,0,0,0.4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.primary-menu-container .search-menu input::placeholder{
+    font-size: 14px;
+    text-align: right;
+}
+.primary-menu-container .search-menu button#butonSearch {
+    border: unset !important;
+    position: absolute;
+    top: 23px;
+    left: 16px;
+    background: unset;
+}
+
+    /*HOME TABS*/
+#tabHome{
+    border:unset;
+    margin-bottom: 30px;
+}
+#tabHome li.nav-item{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    width:calc(100%/3);
+}
+#tabHome li.nav-item:focus {
+    outline: unset !important;
+    border:unset;
+}
+.nav-tabs .nav-link.active{
+    color:#000 !important;
+    border:unset;
+    border-bottom: 4px solid #000 !important;
+}
+.nav-tabs a.nav-link{
+    color:#9E9E9E;
+    border-bottom: 1px solid #ccc;
+}
+.nav-tabs a.nav-link:hover{
+    color:#000 !important;
+    border-top-color:transparent;
+    border-left-color:transparent;
+    border-right-color:transparent;
+}
+.tab-pane{
+    text-align: center;
+}
+.btn-loadmore{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color:#6491F6 !important;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+/*Template post*/
+.post-content-wrapper{
+    margin-bottom: 20px;
+    position: relative;
+}
+.overlay{
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.post-content-wrapper .overlay{
+    border-radius: 40px;
+}
+.post-content-wrapper .post-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 100%;
+    height:185px;
+    padding:20px;
+
+}
+.post-content-wrapper .post-image .rutinas-content{
+    text-align: left;
+    position: absolute;
+    z-index: 1500;
+}
+.post-content-wrapper .post-image .rutinas-content p.duration-rutina{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size: 10px;
+}
+.post-content-wrapper .post-image .rutinas-content h4 a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color:#fff;
+    text-align: left;
+    font-weight: bold;
+}
+.post-content-wrapper .post-image .rutinas-content h4 a:hover{
+    text-decoration: unset;
+}
+/*Footer*/
+aside.widget-area{
+    display: block !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin:0 !important;
+    background-color:#F8F8F8;
+    color:#535252;
+    text-align: center;
+    max-width: 100% !important;
+    font-size: 11px !important;
+}
+aside.widget-area h5{
+    font-size: 14px !important;
+}
+#colophon{
+    display: none;
+}
+/*Single rutinas*/
+.background-single-wrapper{
+position: relative;
+}
+.image-background-image{
+    height:300px;
+    width: 100%;
+    background-size: cover;
+}
+.inner-bg-content{
+    width: 100%;
+   position: absolute;
+   bottom: 0;
+    align-items: flex-end;
+    z-index: 1000;
+}
+.inner-bg-content h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.icons-menu{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.icons-menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.icons-menu ul li{
+    list-style: none;
+}
+.icons-menu ul li a i, .dropdown-icon.close svg path, #saveVideo.video-save i{
+    font-size: 26px;
+    background: rgb(121,107,254);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    fill:rgb(121,107,254);
+}
+
+/*Video*/
+.content-video{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1500;
+}
+
+.content-video .btn-contentvideo a i:before{ color:#fff !important; font-size: 26px;}
+.content-video #saveVideo{
+    border:unset;
+    background: unset;
+}
+.content-video #saveVideo i{
+    color:#fff;
+}
+/*Single*/
+ul.rutina-data{
+    padding:0 !important;
+    display: flex;
+    justify-content: center;
+
+}
+ul.rutina-data li{
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+/*Related*/
+.post-related{
+    padding: 30px 0;
+    background: rgb(121,107,254);
+    background: linear-gradient(0deg, rgba(121,107,254,1) 0%, rgba(81,182,240,1) 100%);
+}
+/*Login*/
+#login{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+#login  .overlay.login{
+    padding: 40px 20px;
+    background:rgba(0,0,0,0.7);
+    width: 100%;
+    height:100%;
+}
+#login .contentlogin{
+    text-align: center;
+}
+#login .contentlogin img{
+    max-width: 200px;
+    margin: 0 auto;
+}
+#login .contentlogin h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+#login .contentlogin p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+body.page #login form#login-form input.input-register{
+    padding:5px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background-color: #fff !important;
+    line-height: 0;
+    border: unset;
+}
+#login form#login-form input::placeholder{
+    color:#838383;
+}
+#login form#login-form  .btn-login{
+    background: linear-gradient(0deg, rgba(121,107,254,1) 0%, rgba(81,182,240,1) 100%);
+    color:#fff;
+    padding:5px 15px;
+    width: 100%;
+    border-radius: 15px;
+    border: unset;
+}
+#login #errorLogin{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 20px;
+}
+    /*utilities*/
+.hidden{
+    display: none !important;
+}
+
+/*tax planes*/
+.video-planes-tax{
+    position: relative;
+    margin-bottom: 30px;
+}
+.complete-rutine{
+    z-index: 2000;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+.complete-rutine > div{
+    display: flex;
+    align-items: center;
+}
+.complete-rutine > div p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.7);
+    color:rgba(81,182,240,1);
+    padding: 5px 20px;
+    border-radius: 20px;
+    height:30px;
+    font-size: 12px;
+    position: relative;
+    left: 17px;
+}
+.complete-rutine > div span.round-icon{
+    width: 45px;
+    height:45px;
+    background: linear-gradient(0deg, rgba(121,107,254,1) 0%, rgba(81,182,240,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+.complete-rutine > div span.round-icon i{
+    color:#fff;
+}
